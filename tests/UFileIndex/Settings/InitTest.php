@@ -61,7 +61,7 @@ class InitTest extends TestCase {
 	}
 
 	/**
-	 * Тетсирует метод загрузки настроек
+	 * Тестирует метод загрузки настроек
 	 */
 	public function testLoadSettings() {
 		try {

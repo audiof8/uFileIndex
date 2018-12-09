@@ -5,11 +5,15 @@ namespace UFileIndex\Settings;
  * @package UFileIndex\Settings
  */
 class Container {
+	/** @var array список разрешенных mime типов */
 	private $allowedMimeTypeList = [];
+	/** @var int максимальный размер файла в байтах */
 	private $maxFileSize;
+	/** @var int максимальный размер пакета для чтения из файла */
 	private $maxPacketSize;
 
 	/**
+	 * Возвращает список разрешенных mime типов
 	 * @return array
 	 */
 	public function getAllowedMimeTypeList(): array {
@@ -17,6 +21,7 @@ class Container {
 	}
 
 	/**
+	 * Возвращает максимальный размер файла в байтах
 	 * @return mixed
 	 */
 	public function getMaxFileSize() : int {
@@ -24,6 +29,7 @@ class Container {
 	}
 
 	/**
+	 * Возвращает максимальный размер пакета для чтения из файла
 	 * @return mixed
 	 */
 	public function getMaxPacketSize() : int {
@@ -31,7 +37,8 @@ class Container {
 	}
 
 	/**
-	 * @param array $allowedMimeTypeList
+	 * Устанавливает список разрешенных mime типов
+	 * @param array $allowedMimeTypeList - список разрешенных mime типов
 	 *
 	 * @return Container
 	 */
@@ -41,7 +48,8 @@ class Container {
 	}
 
 	/**
-	 * @param $maxFileSize
+	 * Устанавливает максимальный размер файла в байтах
+	 * @param int $maxFileSize - максимальный размер файла в байтах
 	 *
 	 * @return Container
 	 */
@@ -51,7 +59,8 @@ class Container {
 	}
 
 	/**
-	 * @param mixed $maxPacketSize
+	 * Устанавливает размер пакета для чтения из файла
+	 * @param int $maxPacketSize - размер пакета для чтения из файла
 	 *
 	 * @return Container
 	 */
